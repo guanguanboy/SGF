@@ -100,7 +100,8 @@ class SG_MSA(nn.Module):
         self.qkv = nn.Conv2d(dim, dim*3, kernel_size=1, bias=bias)
         self.qkv_dwconv = nn.Conv2d(dim*3, dim*3, kernel_size=3, stride=1, padding=1, groups=dim*3, bias=bias)
         self.project_out = nn.Conv2d(dim, dim, kernel_size=1, bias=bias)
-        
+        self.activation_lay = nn.GELU()
+
 
 
     def forward(self, x, seg_feats):
@@ -113,7 +114,11 @@ class SG_MSA(nn.Module):
         k = rearrange(k, 'b (head c) h w -> b head c (h w)', head=self.num_heads)
         v = rearrange(v, 'b (head c) h w -> b head c (h w)', head=self.num_heads)
         seg_feats = rearrange(seg_feats, 'b (head c) h w -> b head c (h w)', head=self.num_heads)
+        seg_feats = self.activation_lay(seg_feats)
+
         v = v * seg_feats
+        q = q * seg_feats
+        k = k * seg_feats
 
         q = torch.nn.functional.normalize(q, dim=-1)
         k = torch.nn.functional.normalize(k, dim=-1)
