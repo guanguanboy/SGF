@@ -38,9 +38,9 @@ Download the following datasets:
 
 LOL-v1 [Baidu Disk](https://pan.baidu.com/s/1_1mJU4DkvwDc5XazEl6ILQ) (code: `o42q`), [Google Drive](https://drive.google.com/file/d/12YaOu0zDWQQrULidMTpozfbsZqzm4piC/view?usp=sharing)
 
-LOL-v2 [Baidu Disk](https://pan.baidu.com/s/1VmT492yBA6I3BHZRmsuyXw) (code: `g4c1`), [Google Drive](https://drive.google.com/file/d/19ro8a2CkVCRpj2141GpdkGqdlnSrym2M/view?usp=sharing)
+LOL-v2 [Baidu Disk](https://pan.baidu.com/s/1VmT492yBA6I3BHZRmsuyXw) (code: `g4c1`), [Google Drive](https://drive.google.com/file/d/1SKcMVziYOtkmv4hSPXdWhR81KogvmO20/view?usp=sharing)
 
-SID [Baidu Disk](https://pan.baidu.com/s/1lppq4NbPvy1YjanW2W92zA) (code: `9rlf`), [Google Drive](https://drive.google.com/drive/folders/1eQ-5Z303sbASEvsgCBSDbhijzLTWQJtR?usp=share_link&pli=1)
+SID [Baidu Disk](https://pan.baidu.com/s/1lppq4NbPvy1YjanW2W92zA) (code: `9rlf`), [Google Drive](https://drive.google.com/file/d/19ro8a2CkVCRpj2141GpdkGqdlnSrym2M/view?usp=sharing)
 
 
 ## Training
