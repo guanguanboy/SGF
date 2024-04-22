@@ -36,11 +36,11 @@ python setup_basicsr.py develop --no_cuda_ext
 ## Prepare Dataset
 Download the following datasets:
 
-LOL-v1 [Baidu Disk](https://pan.baidu.com/s/1ZAC9TWR-YeuLIkWs3L7z4g?pwd=cyh2) (code: `cyh2`), [Google Drive](https://drive.google.com/file/d/1L-kqSQyrmMueBh_ziWoPFhfsAh50h20H/view?usp=sharing)
+LOL-v1 [Baidu Disk](https://pan.baidu.com/s/1_1mJU4DkvwDc5XazEl6ILQ) (code: `o42q`), [Google Drive](https://drive.google.com/file/d/1L-kqSQyrmMueBh_ziWoPFhfsAh50h20H/view?usp=sharing)
 
-LOL-v2 [Baidu Disk](https://pan.baidu.com/s/1X4HykuVL_1WyB3LWJJhBQg?pwd=cyh2) (code: `cyh2`), [Google Drive](https://drive.google.com/file/d/1Ou9EljYZW8o5dbDCf9R34FS8Pd8kEp2U/view?usp=sharing)
+LOL-v2 [Baidu Disk](https://pan.baidu.com/s/1VmT492yBA6I3BHZRmsuyXw) (code: `g4c1`), [Google Drive](https://drive.google.com/file/d/1Ou9EljYZW8o5dbDCf9R34FS8Pd8kEp2U/view?usp=sharing)
 
-SID [Baidu Disk](https://pan.baidu.com/share/init?surl=HRr-5LJO0V0CWqtoctQp9w) (code: `gplv`), [Google Drive](https://drive.google.com/drive/folders/1eQ-5Z303sbASEvsgCBSDbhijzLTWQJtR?usp=share_link&pli=1)
+SID [Baidu Disk](https://pan.baidu.com/s/1lppq4NbPvy1YjanW2W92zA) (code: `9rlf`), [Google Drive](https://drive.google.com/drive/folders/1eQ-5Z303sbASEvsgCBSDbhijzLTWQJtR?usp=share_link&pli=1)
 
 
 ## Training
