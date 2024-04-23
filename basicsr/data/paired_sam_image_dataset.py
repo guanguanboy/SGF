@@ -297,6 +297,7 @@ class Dataset_PairedSamImage(data.Dataset):
                                     bgr2rgb=True,
                                     float32=True)
         img_semantic = img2tensor(img_semantic, bgr2rgb=False, float32=True)
+        #img_semantic = torch.ones_like(img_semantic)
         # normalize
         if self.mean is not None or self.std is not None:
             normalize(img_lq, self.mean, self.std, inplace=True)
@@ -417,6 +418,8 @@ class Dataset_PairedSamImage_LOLv2(data.Dataset):
                                     bgr2rgb=True,
                                     float32=True)
         img_semantic = img2tensor(img_semantic, bgr2rgb=False, float32=True)
+        #img_semantic = torch.ones_like(img_semantic)
+
         # normalize
         if self.mean is not None or self.std is not None:
             normalize(img_lq, self.mean, self.std, inplace=True)

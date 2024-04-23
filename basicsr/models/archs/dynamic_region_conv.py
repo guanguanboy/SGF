@@ -3,12 +3,23 @@ import torch.nn as nn
 import torch
 
 from torch.autograd import Variable, Function
-
+from basicsr.utils.img_util import save_feature_map
+featmap_index =  0
 class asign_index(torch.autograd.Function):
     @staticmethod
     def forward(ctx, kernel, guide_feature):
         ctx.save_for_backward(kernel, guide_feature)
         guide_mask = torch.zeros_like(guide_feature).scatter_(1, guide_feature.argmax(dim=1, keepdim=True), 1).unsqueeze(2) # B x 3 x 1 x 25 x 25
+        
+        """
+        global featmap_index
+        featmap_index = featmap_index + 1
+        
+        for mask_index in range(8):
+            feats_file_name = f'results/region_masks/r_{mask_index}_mask.png'
+
+            save_feature_map(guide_mask[:,mask_index,:,:,:], feats_file_name)    
+        """        
         return torch.sum(kernel * guide_mask, dim=1)
     
     @staticmethod

@@ -131,6 +131,7 @@ class Dataset_SIDImageSemantic(data.Dataset):
         # img_nf = cv2.blur(img_nf, (5, 5))
         # img_nf = img_nf * 1.0 / 255.0
         # img_nf = torch.Tensor(img_nf).float().permute(2, 0, 1)
+        #img_SM = torch.ones_like(img_SM)
 
         return {
             'lq': img_LQ,
