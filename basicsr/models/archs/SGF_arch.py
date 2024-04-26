@@ -8,7 +8,9 @@ from basicsr.models.archs.dynamic_region_conv import DRConv2d
 from einops import rearrange
 from pdb import set_trace as stx
 import numbers
-
+#from basicsr.utils.img_util import save_feature_map
+# 定义全局变量
+#featmap_index = 0
 
 ##########################################################################
 ## Layer Norm
@@ -291,7 +293,11 @@ class SGF(nn.Module):
         seg_map = inp[:,3:4,:,:]
 
         seg_feats = self.estimator(img_rgb, seg_map)
-        
+        #global featmap_index
+        #featmap_index = featmap_index + 1
+        #feats_file_name = f'results/featmaps/{featmap_index}_feats.png'
+
+        #save_feature_map(seg_feats, feats_file_name)        
         x = self.enhancer(inp, seg_feats)
 
         return x
