@@ -8,6 +8,7 @@ from basicsr.models.archs.dynamic_region_conv import DRConv2d
 from einops import rearrange
 from pdb import set_trace as stx
 import numbers
+import os
 #from basicsr.utils.img_util import save_feature_map
 # 定义全局变量
 #featmap_index = 0
@@ -279,8 +280,7 @@ class SGF(nn.Module):
     def __init__(self, img_channel=3, width=16, middle_blk_num=1, enc_blk_nums=[], dec_blk_nums=[]):
         super().__init__()
 
-        self.feature_converter = nn.Conv2d(in_channels=1, out_channels=width, kernel_size=3, padding=1, stride=1, groups=1,
-                              bias=True)
+        self.feature_converter = nn.Conv2d(in_channels=1, out_channels=width, kernel_size=3, padding=1, stride=1, groups=1, bias=True)
         
         self.estimator = EdgeAwareFeatureExtractor(width)
         
@@ -293,11 +293,17 @@ class SGF(nn.Module):
         seg_map = inp[:,3:4,:,:]
 
         seg_feats = self.estimator(img_rgb, seg_map)
-        #global featmap_index
-        #featmap_index = featmap_index + 1
-        #feats_file_name = f'results/featmaps/{featmap_index}_feats.png'
+        
+        """
+        global featmap_index
+        featmap_index = featmap_index + 1
+        featmap_rootpath = 'results/featmaps'
+        if not os.path.exists(featmap_rootpath):
+            os.mkdir(featmap_rootpath)
+        feats_file_name = f'results/featmaps/{featmap_index}_feats.png'
 
-        #save_feature_map(seg_feats, feats_file_name)        
+        save_feature_map(seg_feats, feats_file_name)        
+        """
         x = self.enhancer(inp, seg_feats)
 
         return x
